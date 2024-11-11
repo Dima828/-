@@ -42,6 +42,7 @@ html{
 .title{
     font-weight: 700;
     line-height: 120%;
+    margin-bottom: 32px;
 }
 
 .desc{
@@ -157,9 +158,12 @@ ol{
 
 /* About */
 
+.about{
+    margin-bottom: 80px;
+}
+
 .about__title{
     font-size: clamp(40px, 3.33vw, 48px);
-    margin-bottom: 32px;
 }
 
 .about__content{
@@ -173,6 +177,57 @@ ol{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 20px;
+}
+
+/* Products */
+
+.products__title{
+    font-size: clamp(40px, 3.33vw, 48px);
+}
+
+.products__item{
+    background-color: var(--color-light-gray);
+}
+
+.products__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 20px;
+}
+
+.products__card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    max-width: 380px;
+    min-height: 435px;
+}
+
+.card__desc .card__title{
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.card__desc{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    bottom: 32px;
+}
+
+.card__link{
+    color: var(--color-accent);
+    font-size: 20px;
+    line-height: 120%;
+}
+
+@media screen and (max-width: 1100px) {
+    .card__desc .card__title{
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 750px){
@@ -191,6 +246,11 @@ ol{
     .hero__title,
     .hero__desc{
         max-width: 100%;
+    }
+
+    .products__list{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 15px;
     }
 }
 
@@ -226,6 +286,11 @@ ol{
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 20px;
+    }
+
+    .products__list{
+        grid-template-columns: 1fr;
+        row-gap: 15px;
     }
     
 }
