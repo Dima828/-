@@ -9,6 +9,8 @@
 	--color-third: #d9d9d9;
 	--color-gray: #888;
 	--color-light-gray: #f5f5f5;
+
+    --transition: .2s ease-in-out;
 }
 
 *{
@@ -181,6 +183,10 @@ ol{
 
 /* Products */
 
+.products{
+    margin-bottom: 80px;
+}
+
 .products__title{
     font-size: clamp(40px, 3.33vw, 48px);
 }
@@ -223,6 +229,34 @@ ol{
     line-height: 120%;
 }
 
+/* Map */
+
+.map__title{
+    font-size: clamp(40px, 3.33vw, 48px);
+    word-wrap: break-word;
+}
+
+.city{
+    cursor: pointer;
+}
+
+.map__image{
+    position: relative;
+}
+
+.map__image path.city:hover,
+.map__image path.city:focus{
+    fill: #ffffff;
+    background-color: var(--color-gray);
+    transition: fill .3s ease-in;
+}
+
+
+.text{
+    position: absolute;
+    fill: var(--color-dark) !important;
+    z-index: 1;
+}
 @media screen and (max-width: 1100px) {
     .card__desc .card__title{
         margin-bottom: 12px;
